@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mon compte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="user">
+    <ion-item>
+      <ion-input
+        label="E-mail"
+        value="{{user.email}}"
+        [disabled]="true"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        label="Pseudo"
+        value="{{user.displayName}}"
+        [disabled]="true"
+      ></ion-input>
+    </ion-item>
+    <ion-button (click)="deconnexion()">Se déconnecter</ion-button>
+  </ion-list>
+
+  <ion-list *ngIf="!user">
+    <h3>Vous n'êtes pas connecté</h3>
+    <ion-button [routerLink]="['/login']">Se connecter</ion-button>
+  </ion-list>
+</ion-content>

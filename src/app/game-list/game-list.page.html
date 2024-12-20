@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Liste des jeux</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row *ngIf="admin"><ion-button [routerLink]="['/game-new']">Ajouter un jeu</ion-button></ion-row>
+    <ion-row>
+      <ion-col
+        *ngFor="let game of games"
+        size="6"
+        size-md="4"
+        size-lg="2"
+        [routerLink]="['/game', game.id]"
+      >
+        <div class="container">
+          <ion-img src="{{game.img}}" alt="" />
+          <div class="container-infos">
+            <span class="title">{{ game.titre }}</span><span class="price">{{ game.prix }}€</span>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

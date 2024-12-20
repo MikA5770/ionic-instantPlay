@@ -1,0 +1,31 @@
+ion-col {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  .container {
+    .container-infos {
+      padding-top: 5px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        color: #999;
+      }
+      .price {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+
+    ion-img::part(image) {
+      border-radius: 6px;
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="game">Modification : {{ game.titre }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="game">
+  <ion-input
+    label="Titre"
+    type="text"
+    label-placement="floating"
+    fill="outline"
+    [(ngModel)]="game.titre"
+    placeholder="Entrez un titre..."
+    [clearInput]="true"
+  >
+  </ion-input>
+
+  <ion-input
+    label="Description"
+    type="text"
+    label-placement="floating"
+    fill="outline"
+    [(ngModel)]="game.description"
+    placeholder="Entrez une description ..."
+    [clearInput]="true"
+  >
+  </ion-input>
+
+  <ion-input
+    label="Studio de développement"
+    type="text"
+    label-placement="floating"
+    fill="outline"
+    [(ngModel)]="game.studio"
+    placeholder="Entrez un studio de développement ..."
+    [clearInput]="true"
+  >
+  </ion-input>
+
+  <ion-list>
+    <ion-item>
+      <ion-select
+        aria-label="Plateforme"
+        placeholder="Plateforme"
+        [multiple]="true"
+        [(ngModel)]="game.plateforme"
+      >
+        <ion-select-option value="PS5">PS5</ion-select-option>
+        <ion-select-option value="Xbox">Xbox</ion-select-option>
+        <ion-select-option value="Steam">Steam</ion-select-option>
+        <ion-select-option value="Battle.net">Battle.net</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-input
+    label="Prix"
+    type="number"
+    label-placement="floating"
+    fill="outline"
+    [(ngModel)]="game.prix"
+    placeholder="Entrez un prix..."
+    [clearInput]="true"
+  >
+  </ion-input>
+
+  <ion-input
+    label="Image"
+    type="text"
+    label-placement="floating"
+    fill="outline"
+    [(ngModel)]="game.img"
+    placeholder="Entrez le lien d'une image..."
+    [clearInput]="true"
+  >
+  </ion-input>
+
+  <ion-button (click)="modif()">Modifier</ion-button>
+  <ion-button id="supp-alert">Supprimer</ion-button>
+  <ion-alert
+    trigger="supp-alert"
+    header="Voulez-vous réellement supprimer {{ game.titre }} ?"
+    [buttons]="alertButtons"
+  ></ion-alert>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "instant-play",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

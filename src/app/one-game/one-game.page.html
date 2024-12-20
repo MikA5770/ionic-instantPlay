@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title *ngIf="game">{{ game.titre }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="game">
+  <ion-row>
+    <ion-col>
+      <ion-img
+        src="{{ game.img }}"
+        alt="Image du jeu : {{game.titre}}"
+      ></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <h2>{{game.titre}}</h2>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <h3>{{game.prix}}€</h3>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col> Studio de développement : {{game.studio}} </ion-col>
+    <ion-col>
+      Plateformes :
+      <div *ngFor="let plateforme of game.plateforme">{{plateforme}}</div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button *ngIf="admin" [routerLink]="['/edit', id]">Gérer le jeu</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
