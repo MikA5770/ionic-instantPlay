@@ -7,39 +7,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-input
-  label="Titre"
-  label-placement="floating"
-  fill="outline"
-  [(ngModel)]="game.titre"
-  placeholder="Enter un titre..."
-  type="text"
->
-</ion-input>
-
-<ion-input
-  label="Description"
-  label-placement="floating"
-  fill="outline"
-  [(ngModel)]="game.description"
-  placeholder="Entrez une description ..."
-  type="text"
->
-</ion-input>
-
-<ion-input
-  label="Studio de développement"
-  label-placement="floating"
-  fill="outline"
-  [(ngModel)]="game.studio"
-  placeholder="Entrez un studio de développement..."
-  type="text"
->
-</ion-input>
-
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item>
+    <ion-item class="ion-margin-horizontal">
+      <ion-input
+        label="Titre"
+        labelPlacement="stacked"
+        [(ngModel)]="game.titre"
+        placeholder="Enter un titre..."
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-horizontal">
+      <ion-input
+        label="Studio de développement"
+        labelPlacement="stacked"
+        [(ngModel)]="game.studio"
+        placeholder="Entrez un studio de développement..."
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-horizontal">
       <ion-select
         aria-label="Plateforme"
         placeholder="Plateforme"
@@ -52,27 +44,31 @@
         <ion-select-option value="Battle.net">Battle.net</ion-select-option>
       </ion-select>
     </ion-item>
+
+    <ion-item class="ion-margin-horizontal">
+      <ion-input
+        label="Prix"
+        labelPlacement="stacked"
+        [(ngModel)]="game.prix"
+        placeholder="Entrez un prix..."
+        type="number"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-horizontal">
+      <ion-input
+        label="Image"
+        placeholder="Entrez le lien d'une image..."
+        labelPlacement="stacked"
+        [(ngModel)]="game.img"
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
   </ion-list>
 
-  <ion-input
-    label="Prix"
-    label-placement="floating"
-    fill="outline"
-    [(ngModel)]="game.prix"
-    placeholder="Entrez un prix..."
-    type="number"
-  >
-  </ion-input>
-
-  <ion-input
-    label="Image"
-    placeholder="Entrez le lien d'une image..."
-    label-placement="floating"
-    fill="outline"
-    [(ngModel)]="game.img"
-    type="text"
-  >
-  </ion-input>
-
-  <ion-button (click)="add()">Ajouter</ion-button>
+  <div class="ion-text-center ion-margin-vertical">
+    <ion-button (click)="add()">Ajouter</ion-button>
+  </div>
 </ion-content>

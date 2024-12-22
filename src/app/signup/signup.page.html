@@ -1,9 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="backgroundHeader">
+  <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button
-        defaultHref="/login"
-      ></ion-back-button>
+      <ion-back-button defaultHref="/login"></ion-back-button>
     </ion-buttons>
     <ion-title>Inscription</ion-title>
   </ion-toolbar>
@@ -16,23 +14,21 @@
       fill="outline"
       label="Email"
       type="email"
-      placeholder="email@example.com"
       [(ngModel)]="email"
     ></ion-input>
     <br />
     <ion-input
       labelPlacement="floating"
       fill="outline"
-      label="Name"
+      label="Pseudo"
       type="text"
-      placeholder="Entrez votre pseudo"
       [(ngModel)]="name"
     ></ion-input>
     <br />
     <ion-input
       labelPlacement="floating"
       fill="outline"
-      label="Password"
+      label="Mot de passe"
       type="password"
       [(ngModel)]="password1"
     ></ion-input>
@@ -40,13 +36,11 @@
     <ion-input
       labelPlacement="floating"
       fill="outline"
-      label="Password"
+      label="Confirmation du mot de passe"
       type="password"
       [(ngModel)]="password2"
     ></ion-input>
     <br />
-    <ion-button (click)="signup()" expand="block" color="medium"
-      >inscription</ion-button
-    >
+    <ion-button (click)="signup()" expand="block">Inscription</ion-button>
   </div>
 </ion-content>

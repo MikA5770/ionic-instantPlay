@@ -1,13 +1,67 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>about</ion-title>
+    <ion-title>A propos de l'application</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">about</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>But du projet</h2>
+        <p>
+          Le but de ce projet était de développer une petite application en
+          utilisant le framework IONIC. Cette application, se nommant Instant
+          Play, gère un CRUD sur les jeux-vidéos et fait usage de Firebase en
+          guise de base de données. Il est donc possible d'accéder à la liste
+          des jeux disponibles, de modifier un jeu, d'en ajouter un et enfin
+          d'en supprimer. La modification, la suppression et l'ajout d'un jeu
+          est réservé aux adminsitrateurs. En effet l'application contient un
+          système de connexion et d'inscription géré par Firebase. Il est
+          possible de retrouver une vidéo YouTube qui présente l'application
+          <a href="">ici</a>
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h2>Problème lié au <code>ion-select</code></h2>
+        <p>
+          L'application contient un bug que je n'ai pas su résoudre. Il s'agit
+          de la modal qui s'affiche lorsqu'on souhaite sélectionner les
+          plateformes d'un jeu. A la base, les options étaient visibles sur fond
+          blanc. Cependant, j'ai changé le fond de l'application en noir dans le
+          fichier <code>app.component.scss</code>. J'ai donc voulu styliser le
+          <code>ion-alert</code> (la modal) qui apparait lors du choix des
+          plateformes, mais le style ne s'applique pas. L'ordre des plateformes
+          est le suivant : PS5, Xbox, Steam, Battle.net.
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h2>Perspectives d'améliorations</h2>
+        <p>
+          En ce qui concerne les fonctions que j'aurais souhaité implémenter :
+        </p>
+        <ul>
+          <li>
+            il y'a tout d'abord un système de panier. Un utilisateur pourrait
+            ajouter un jeu à son panier et modifier les quantités à sa guise.
+          </li>
+          <li>
+            ensuite, il y'a également l'implémentation d'un faux système de
+            paiement qui ajouterait les éléments du panier dans une commande.
+          </li>
+          <li>
+            pour finir, améliorer le style global du site, en intégrant par
+            exemple une page d'accueil qui présente l'application ou des
+            animations fluides qui améliorent l'expérience utilisateur
+          </li>
+        </ul>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

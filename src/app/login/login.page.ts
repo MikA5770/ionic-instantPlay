@@ -13,7 +13,7 @@ export class LoginPage {
 
   passwordType: string = 'password';
 
-  constructor(private Router: Router, private Auth: AuthService) {}
+  constructor(private router: Router, private Auth: AuthService) {}
 
   changeInputPasswordType() {
     this.passwordType = this.passwordType == 'password' ? 'text' : 'password';
@@ -28,6 +28,6 @@ export class LoginPage {
   }
 
   signup() {
-    this.Router.navigateByUrl('signup');
+    this.router.navigate(['/signup']);
   }
 }

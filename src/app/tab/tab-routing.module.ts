@@ -14,6 +14,11 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'home',
+        loadChildren: () =>
+          import('../home/home.module').then((m) => m.HomePageModule),
+      },
+      {
         path: 'about',
         loadChildren: () =>
           import('../about/about.module').then((m) => m.AboutPageModule),
@@ -40,7 +45,9 @@ const routes: Routes = [
       {
         path: 'game-new',
         loadChildren: () =>
-          import('../game-new/game-new.module').then((m) => m.GameNewPageModule),
+          import('../game-new/game-new.module').then(
+            (m) => m.GameNewPageModule
+          ),
       },
       {
         path: 'login',
@@ -55,7 +62,9 @@ const routes: Routes = [
       {
         path: 'game/:id',
         loadChildren: () =>
-          import('../one-game/one-game.module').then((m) => m.OneGamePageModule),
+          import('../one-game/one-game.module').then(
+            (m) => m.OneGamePageModule
+          ),
       },
     ],
   },

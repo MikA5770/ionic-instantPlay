@@ -18,29 +18,30 @@
     </ion-col>
   </ion-row>
 
-  <ion-row>
-    <ion-col>
-      <h2>{{game.titre}}</h2>
-    </ion-col>
+  <ion-row class="ion-text-center titre-jeu">
+    <ion-col> {{game.titre}} </ion-col>
   </ion-row>
 
-  <ion-row>
-    <ion-col>
-      <h3>{{game.prix}}€</h3>
-    </ion-col>
+  <ion-row class="ion-text-center prix">
+    <ion-col> {{game.prix}}€ </ion-col>
   </ion-row>
 
-  <ion-row>
+  <ion-row class="infos ion-margin-vertical">
     <ion-col> Studio de développement : {{game.studio}} </ion-col>
+  </ion-row>
+
+  <ion-row class="infos">
     <ion-col>
-      Plateformes :
-      <div *ngFor="let plateforme of game.plateforme">{{plateforme}}</div>
+      Jeu disponible sur :
+      <span>{{ game.plateforme.join(', ') }}</span>
     </ion-col>
   </ion-row>
 
-  <ion-row>
+  <ion-row class="ion-margin-vertical ion-text-center">
     <ion-col>
-      <ion-button *ngIf="admin" [routerLink]="['/edit', id]">Gérer le jeu</ion-button>
+      <ion-button *ngIf="admin" [routerLink]="['/edit', id]"
+        >Gérer le jeu</ion-button
+      >
     </ion-col>
   </ion-row>
 </ion-content>

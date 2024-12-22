@@ -8,40 +8,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" *ngIf="game">
-  <ion-input
-    label="Titre"
-    type="text"
-    label-placement="floating"
-    fill="outline"
-    [(ngModel)]="game.titre"
-    placeholder="Entrez un titre..."
-    [clearInput]="true"
-  >
-  </ion-input>
-
-  <ion-input
-    label="Description"
-    type="text"
-    label-placement="floating"
-    fill="outline"
-    [(ngModel)]="game.description"
-    placeholder="Entrez une description ..."
-    [clearInput]="true"
-  >
-  </ion-input>
-
-  <ion-input
-    label="Studio de développement"
-    type="text"
-    label-placement="floating"
-    fill="outline"
-    [(ngModel)]="game.studio"
-    placeholder="Entrez un studio de développement ..."
-    [clearInput]="true"
-  >
-  </ion-input>
-
   <ion-list>
+    <ion-item>
+      <ion-input
+        label="Titre"
+        type="text"
+        label-placement="stacked"
+        [(ngModel)]="game.titre"
+        placeholder="Entrez un titre..."
+        [clearInput]="true"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Studio de développement"
+        type="text"
+        label-placement="stacked"
+        [(ngModel)]="game.studio"
+        placeholder="Entrez un studio de développement ..."
+        [clearInput]="true"
+      >
+      </ion-input>
+    </ion-item>
+
     <ion-item>
       <ion-select
         aria-label="Plateforme"
@@ -55,32 +46,39 @@
         <ion-select-option value="Battle.net">Battle.net</ion-select-option>
       </ion-select>
     </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Prix"
+        type="number"
+        label-placement="stacked"
+        [(ngModel)]="game.prix"
+        placeholder="Entrez un prix..."
+        [clearInput]="true"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Image"
+        type="text"
+        label-placement="stacked"
+        [(ngModel)]="game.img"
+        placeholder="Entrez le lien d'une image..."
+        [clearInput]="true"
+      >
+      </ion-input>
+    </ion-item>
   </ion-list>
 
-  <ion-input
-    label="Prix"
-    type="number"
-    label-placement="floating"
-    fill="outline"
-    [(ngModel)]="game.prix"
-    placeholder="Entrez un prix..."
-    [clearInput]="true"
-  >
-  </ion-input>
+  <ion-grid>
+    <ion-row class="ion-justify-content-around ion-margin-vertical">
+      <ion-button (click)="modif()">Modifier</ion-button>
+      <ion-button id="supp-alert">Supprimer</ion-button>
+    </ion-row>
+  </ion-grid>
 
-  <ion-input
-    label="Image"
-    type="text"
-    label-placement="floating"
-    fill="outline"
-    [(ngModel)]="game.img"
-    placeholder="Entrez le lien d'une image..."
-    [clearInput]="true"
-  >
-  </ion-input>
-
-  <ion-button (click)="modif()">Modifier</ion-button>
-  <ion-button id="supp-alert">Supprimer</ion-button>
   <ion-alert
     trigger="supp-alert"
     header="Voulez-vous réellement supprimer {{ game.titre }} ?"

@@ -6,21 +6,29 @@
 
 <ion-content [fullscreen]="true">
   <ion-list *ngIf="user">
-    <ion-item>
-      <ion-input
-        label="E-mail"
-        value="{{user.email}}"
-        [disabled]="true"
-      ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input
-        label="Pseudo"
-        value="{{user.displayName}}"
-        [disabled]="true"
-      ></ion-input>
-    </ion-item>
-    <ion-button (click)="deconnexion()">Se déconnecter</ion-button>
+    <div class="ion-margin-vertical">
+      <ion-item>
+        <ion-input
+          label="E-mail"
+          value="{{user.email}}"
+          [disabled]="true"
+        ></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="ion-margin-vertical">
+      <ion-item>
+        <ion-input
+          label="Pseudo"
+          value="{{user.displayName}}"
+          [disabled]="true"
+        ></ion-input>
+      </ion-item>
+    </div>
+    
+    <div class="ion-text-center">
+      <ion-button (click)="deconnexion()">Se déconnecter</ion-button>
+    </div>
   </ion-list>
 
   <ion-list *ngIf="!user">

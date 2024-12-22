@@ -1,6 +1,5 @@
 export class Game {
   titre: string;
-  description: string;
   plateforme: string[]; 
   studio: string;
   img: string;
@@ -8,7 +7,6 @@ export class Game {
 
   constructor() {
     this.titre = "";
-    this.description = "";
     this.plateforme = [];
     this.studio = "";
     this.img = "";
