@@ -11,6 +11,7 @@
   <ion-list>
     <ion-item class="ion-margin-horizontal">
       <ion-input
+        required
         label="Titre"
         labelPlacement="stacked"
         [(ngModel)]="game.titre"
@@ -22,6 +23,7 @@
 
     <ion-item class="ion-margin-horizontal">
       <ion-input
+        required
         label="Studio de développement"
         labelPlacement="stacked"
         [(ngModel)]="game.studio"
@@ -47,6 +49,8 @@
 
     <ion-item class="ion-margin-horizontal">
       <ion-input
+        required
+        min="1"
         label="Prix"
         labelPlacement="stacked"
         [(ngModel)]="game.prix"
@@ -58,6 +62,7 @@
 
     <ion-item class="ion-margin-horizontal">
       <ion-input
+        required
         label="Image"
         placeholder="Entrez le lien d'une image..."
         labelPlacement="stacked"

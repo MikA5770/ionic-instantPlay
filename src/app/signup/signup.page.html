@@ -10,6 +10,9 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="form">
     <ion-input
+      required
+      email
+      errorText="Entrez un email valide"
       labelPlacement="floating"
       fill="outline"
       label="Email"
@@ -18,6 +21,7 @@
     ></ion-input>
     <br />
     <ion-input
+      required
       labelPlacement="floating"
       fill="outline"
       label="Pseudo"
@@ -26,6 +30,7 @@
     ></ion-input>
     <br />
     <ion-input
+      required
       labelPlacement="floating"
       fill="outline"
       label="Mot de passe"
@@ -34,6 +39,7 @@
     ></ion-input>
     <br />
     <ion-input
+      required
       labelPlacement="floating"
       fill="outline"
       label="Confirmation du mot de passe"

@@ -7,6 +7,9 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="form">
     <ion-input
+      required
+      email
+      errorText="Entrez un email valide"
       labelPlacement="floating"
       type="email"
       [(ngModel)]="email"
@@ -16,6 +19,7 @@
     ></ion-input>
     <br />
     <ion-input
+      required
       labelPlacement="floating"
       [type]="passwordType"
       [(ngModel)]="password"
