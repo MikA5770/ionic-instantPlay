@@ -6,7 +6,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-grid>
-    <ion-row class="ion-justify-content-center ion-margin-vertical" *ngIf="admin"><ion-button [routerLink]="['/game-new']">Ajouter un jeu</ion-button></ion-row>
+    <ion-row class="ion-justify-content-center ion-margin-vertical" *ngIf="admin === true"><ion-button [routerLink]="['/game-new']">Ajouter un jeu</ion-button></ion-row>
     <ion-row>
       <ion-col
         *ngFor="let game of games"
